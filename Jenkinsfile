@@ -7,7 +7,7 @@ pipeline {
                         sh 'cp -R helm/* .'
 		        sh 'ls -ltr'
                         sh 'pwd'
-                        sh '/usr/local/bin/helm upgrade --install eli-app Chart.yaml  --set image.repository=eliazulai29/nginx-image:latest --set image.tag=1'
+                        sh '/usr/local/bin/helm upgrade --install eli-app nginx-ingress  --set image.repository=eliazulai29/nginx-image:latest --set image.tag=1'
               			
             }           
         }
